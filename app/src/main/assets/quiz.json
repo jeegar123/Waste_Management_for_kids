@@ -1,0 +1,58 @@
+[
+  {
+		"Q":"Which of the following is used in the production of Plastic?" ,
+		"O":["Mercury","Lead","Vinyl chloride","None of these"],
+		"A":"Vinyl chloride"
+	},
+	{
+		"Q":"what is the PH value of normal rain?" ,
+		"O":[1,5.6,7,5],
+		"A":5.6
+	},
+	{
+		"Q":"what is RRR?" ,
+		"O":["Recycle,Reuse,Reduce","Rabit Rob robin","rust,rashing,rock","rashi ,rog,rangarok"],
+		"A":"Recycle, Reuse, Reduce"
+	},
+	{
+	  "Q":"Which was the first city to an established system of waste removal?" ,
+		"O":["Lahore","Athens","Paris","London"],
+		"A":"Athens"
+	},
+	{
+	  "Q":"Why burning waste is not an acceptable practice of solid waste management?" ,
+	  "O":["Because it is very costly","Because it requires modern technologies","Because it cause several environmental issues","Because it requires lot of space"],
+	  "A":"Because it cause several environmental issues"
+	},
+	{
+	  "Q":"What plan should we make to the disposal of solid waste?" ,
+		"O":["Integrated waste management plan","Recycling of waste management plan","Reducing of waste management plan","Use of waste management plan"],
+		"A":"Integrated waste management plan"
+	},
+	{
+	  "Q":"The term ‘Municipal Solid Waste’ is used to describe which kind of solid waste?" ,
+		"O":["Hazardous","Toxic","Non hazardous","Non toxic"],
+		"A":"Hazardous"
+	},
+	{
+		"Q":"How many main components are there in integrated waste management?" ,
+		"O":["One","Two","Three","Four"],
+		"A":"Three"
+	},
+	{
+	  "Q":"Which of the integrated waste management is reduced on an individual level?",
+	  "O":["Source reduction","Recycling","Disposal","Burning"],
+	  "A":"Source reduction"
+	},
+	{
+	  "Q":"Which of the following can be recycled many times?",
+	  "O":["Plastic","Wood","Organic materials","Aluminum"],
+	  "A":"Aluminum"
+	},
+	{
+	  "Q":"Why plastics are difficult to recycle?",
+	  "O":["Because it is very hard material","Because it is very adhesive in its nature","Because of different types of polymer resins","Because of different sizes of plastic"],
+	  "A":"Because of different sizes of plastic"
+	}
+	
+]

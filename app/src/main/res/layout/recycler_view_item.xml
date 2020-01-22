@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="@drawable/list_view"
+    android:orientation="vertical"
+    android:padding="3dp">
+
+    <TextView
+        android:textColor="#ff0606"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:id="@+id/text_recyle_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="@tools:sample/lorem" />
+
+    <TextView
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        android:id="@+id/text_recyle_ans"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="@tools:sample/lorem" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1pt"/>
+</LinearLayout>

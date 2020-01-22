@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:text="Q.What is This?"
+        android:id="@+id/text_game_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:id="@+id/linear_option_con"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_game_question"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:id="@+id/radio_option_group"
+            android:layout_height="wrap_content"
+            android:checkedButton="@id/radio_option_a">
+
+            <RadioButton
+                android:id="@+id/radio_option_a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="option A" />
+
+            <RadioButton
+                android:id="@+id/radio_option_b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="option B" />
+
+            <RadioButton
+                android:id="@+id/radio_option_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="option C" />
+
+            <RadioButton
+                android:id="@+id/radio_option_d"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="option D" />
+
+        </RadioGroup>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear_option_con"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#3f51b5"
+            android:text="Submit" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="cancel" />
+    </LinearLayout>
+
+
+</RelativeLayout>
