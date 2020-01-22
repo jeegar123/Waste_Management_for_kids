@@ -1,26 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/ic_warning_white_24dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".question_and_answer.QuesAndAnsActivity">
 
-    <TextView
-        android:id="@+id/display_question_ans"
-        android:textAlignment="center"
-        android:textSize="35sp"
-        android:text="Question And Answer"
-        android:background="#9898ff"
-        android:textColor="#ffffff"
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:expanded="false">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/ques_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:elevation="6dp"
+            app:elevation="10dp"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="#ffff"
+            tools:ignore="UnusedAttribute" />
+    </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/app_layout"
         android:id="@+id/recycle_ques_ans"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/display_question_ans"
         tools:listitem="@layout/recycler_view_item" />
 
 </RelativeLayout>

@@ -4,27 +4,36 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
+
 import com.app.wastemanagementforkids.R;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import java.io.IOException;
 import java.io.InputStream;
 
 public class GameActivity extends AppCompatActivity {
     JSONArray jsonArray;
     ViewPager viewPager;
-
+    Toolbar materialToolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
+
+        materialToolbar = findViewById(R.id.game_toolbar);
+        setSupportActionBar(materialToolbar);
+        setTitle("Game");
 
         viewPager = findViewById(R.id.pageview);
         new MyAssyncTask().execute();

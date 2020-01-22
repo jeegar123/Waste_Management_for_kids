@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         materialToolbar = findViewById(R.id.home_toolbar);
         setSupportActionBar(materialToolbar);
+
     }
 
     public void btnClick(View view) {

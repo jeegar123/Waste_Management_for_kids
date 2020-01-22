@@ -6,6 +6,7 @@ import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
@@ -24,11 +25,15 @@ public class StudyActivity extends AppCompatActivity {
     StudyAdapter studyAdapter;
     JSONArray jsonArray;
     ViewPager viewPager;
+    Toolbar materialToolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_study);
         viewPager=findViewById(R.id.content_pager);
+        materialToolbar = findViewById(R.id.study_toolbar);
+        setTitle("Study");
+        setSupportActionBar(materialToolbar);
         new MyAssyncTask().execute();
     }
 

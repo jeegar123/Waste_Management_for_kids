@@ -1,10 +1,15 @@
 package com.app.wastemanagementforkids.video;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.annotation.SuppressLint;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.widget.ListView;
+import android.view.View;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.app.wastemanagementforkids.R;
 
@@ -17,18 +22,39 @@ import java.io.InputStream;
 import java.util.ArrayList;
 
 public class VideoActivity extends AppCompatActivity {
-ListView listView;
-ArrayList<String> arrayList;
-VideoAdapter videoAdapter;
+    public static int count = 0;
+    WebView webView;
+    Toolbar materialToolbar;
+    ArrayList<String> arrayList;
+
+    @SuppressLint("SetJavaScriptEnabled")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video);
-
-        listView=findViewById(R.id.video_list);
-        arrayList=new ArrayList<>();
+        arrayList = new ArrayList<>();
+        webView = findViewById(R.id.vide_webview);
+        WebSettings webSettings = webView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+        webSettings.setJavaScriptCanOpenWindowsAutomatically(true);
+        webView.setWebViewClient(new WebViewClient());
         new MyAssyncTask().execute();
+        materialToolbar = findViewById(R.id.video_toolbar);
+        setSupportActionBar(materialToolbar);
+        setTitle("Videos");
     }
+
+    public void next(View view) {
+        webView.loadUrl(arrayList.get(count + 1));
+        count++;
+    }
+
+    public void previous(View view) {
+        webView.loadUrl(arrayList.get(count - 1));
+        count--;
+    }
+
+    @SuppressLint("StaticFieldLeak")
     class MyAssyncTask extends AsyncTask {
         @Override
         protected void onPreExecute() {
@@ -45,14 +71,11 @@ VideoAdapter videoAdapter;
                 is.read(bytes);
                 is.close();
                 json = new String(bytes, "UTF-8");
-
-                JSONObject jsonObject=new JSONObject(json);
-                JSONArray jsonArray=jsonObject.getJSONArray("video");
-                for(int i=0;i<jsonArray.length();i++){
-                        arrayList.add(jsonArray.getString(i));
+                JSONObject jsonObject = new JSONObject(json);
+                JSONArray jsonArray = jsonObject.getJSONArray("video");
+                for (int i = 0; i < jsonArray.length(); i++) {
+                    arrayList.add(jsonArray.getString(i));
                 }
-                videoAdapter=new VideoAdapter(getApplicationContext(),arrayList);
-
             } catch (IOException e) {
                 e.printStackTrace();
             } catch (JSONException e) {
@@ -64,7 +87,8 @@ VideoAdapter videoAdapter;
         @Override
         protected void onPostExecute(Object o) {
             super.onPostExecute(o);
-            listView.setAdapter(videoAdapter);
+            webView.loadUrl(arrayList.get(count));
+            count++;
         }
 
     }

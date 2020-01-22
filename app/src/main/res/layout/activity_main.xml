@@ -97,7 +97,6 @@
                         android:src="@drawable/game" />
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
-
         </LinearLayout>
         <Button
             android:textSize="30sp"

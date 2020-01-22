@@ -1,12 +1,13 @@
 package com.app.wastemanagementforkids.question_and_answer;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.wastemanagementforkids.R;
 
@@ -19,13 +20,17 @@ import java.io.InputStream;
 public class QuesAndAnsActivity extends AppCompatActivity {
     QuestionAdapter questionAdapter;
     RecyclerView recyclerView;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ques_and_ans);
+        toolbar = findViewById(R.id.ques_toolbar);
+        setSupportActionBar(toolbar);
+        setTitle("Question And Answer");
         new MyAssyncTask().execute();
-        recyclerView=findViewById(R.id.recycle_ques_ans);
+        recyclerView = findViewById(R.id.recycle_ques_ans);
     }
 
     class MyAssyncTask extends AsyncTask {
@@ -33,6 +38,7 @@ public class QuesAndAnsActivity extends AppCompatActivity {
         protected void onPreExecute() {
             super.onPreExecute();
         }
+
         @Override
         protected Object doInBackground(Object[] objects) {
             String json = null;
