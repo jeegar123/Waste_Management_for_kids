@@ -4,9 +4,11 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
 import com.app.wastemanagementforkids.game.GameActivity;
 import com.app.wastemanagementforkids.question_and_answer.QuesAndAnsActivity;
 import com.app.wastemanagementforkids.study.StudyActivity;
@@ -26,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void btnClick(View view) {
-
         switch (view.getId()) {
             case R.id.text_study:
                 startActivity(new Intent(MainActivity.this, StudyActivity.class));
