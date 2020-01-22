@@ -4,12 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="center"
-    android:background="@drawable/list_view"
+    android:layout_margin="5dp"
+    android:background="@drawable/custom_toast_warn_background"
     android:orientation="vertical"
     android:padding="3dp">
 
     <TextView
-        android:textColor="#ff0606"
+        android:textColor="#9BEEB0"
         android:textSize="30sp"
         android:textAlignment="center"
         android:id="@+id/text_recyle_question"
@@ -18,7 +19,7 @@
         tools:text="@tools:sample/lorem" />
 
     <TextView
-        android:textColor="#FFFFFF"
+        android:textColor="#ffffff"
         android:textSize="25sp"
         android:textAlignment="center"
         android:id="@+id/text_recyle_ans"

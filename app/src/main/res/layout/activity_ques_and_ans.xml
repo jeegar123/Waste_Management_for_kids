@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/ic_warning_white_24dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".question_and_answer.QuesAndAnsActivity">
@@ -11,6 +11,8 @@
         android:textAlignment="center"
         android:textSize="35sp"
         android:text="Question And Answer"
+        android:background="#9898ff"
+        android:textColor="#ffffff"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 

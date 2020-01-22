@@ -11,7 +11,12 @@
 	},
 	{
 		"Q":"what is RRR?" ,
-		"O":["Recycle,Reuse,Reduce","Rabit Rob robin","rust,rashing,rock","rashi ,rog,rangarok"],
+      "O": [
+        "Recycle, Reuse, Reduce",
+        "Rabit, Rob, robin",
+        "Rust, Rashing, Rock",
+        "Rashi, Rog, Rangarok"
+      ],
 		"A":"Recycle, Reuse, Reduce"
 	},
 	{
