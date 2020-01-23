@@ -24,7 +24,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <WebView
-        android:layout_alignBottom="@id/lineaar"
+        android:layout_above="@id/lineaar"
         android:layout_alignParentTop="true"
         android:id="@+id/vide_webview"
         android:layout_width="match_parent"
@@ -43,17 +43,17 @@
             android:layout_marginRight="4dp"
             android:layout_weight="1"
             android:onClick="previous"
-            android:padding="5dp"
+            android:layout_margin="10dp"
             android:text="Previous"
-            android:textSize="30sp" />
+            android:textSize="25sp" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="next"
-            android:padding="5dp"
+            android:layout_margin="10dp"
             android:text="Next"
-            android:textSize="30sp" />
+            android:textSize="25sp" />
     </LinearLayout>
 </RelativeLayout>

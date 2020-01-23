@@ -33,7 +33,7 @@ public class GameActivity extends AppCompatActivity {
 
         materialToolbar = findViewById(R.id.game_toolbar);
         setSupportActionBar(materialToolbar);
-        setTitle("Game");
+        setTitle("Quiz");
 
         viewPager = findViewById(R.id.pageview);
         new MyAssyncTask().execute();

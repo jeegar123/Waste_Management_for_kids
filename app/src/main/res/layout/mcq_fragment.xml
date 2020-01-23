@@ -8,6 +8,7 @@
 
 
     <TextView
+        android:textColor="#000"
         android:text="Q.What is This?"
         android:id="@+id/text_game_question"
         android:layout_width="match_parent"
