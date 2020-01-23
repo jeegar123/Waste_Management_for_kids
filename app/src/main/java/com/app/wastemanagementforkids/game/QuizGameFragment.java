@@ -34,7 +34,6 @@ public class QuizGameFragment extends Fragment {
         buttonListiner();
         return view;
     }
-
     private void init() {
         button_option1 = view.findViewById(R.id.option_imag1);
         button_option2 = view.findViewById(R.id.option_imag2);
@@ -42,27 +41,21 @@ public class QuizGameFragment extends Fragment {
         button_option4 = view.findViewById(R.id.option_imag4);
         textQuestion = view.findViewById(R.id.question);
     }
-
     public void setData() {
         String[] data = gameItem.getLink();
-
         textQuestion.setText(gameItem.getQuestion());
         setImage(button_option1, data[0]);
         setImage(button_option2, data[1]);
         setImage(button_option3, data[2]);
         setImage(button_option4, data[3]);
     }
-
     public void setImage(ImageView im, String url) {
         new DownloadImage(im, url);
     }
-
-
     public void buttonListiner() {
         button_option1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 if (gameItem.getV() == 1) {
                     Toast.makeText(getActivity(), "correct", Toast.LENGTH_SHORT).show();
                 } else {
