@@ -11,10 +11,27 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <Button
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="nextPage" />
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:onClick="previousPage"
+            android:text="previous" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:onClick="nextPage"
+            android:text="next" />
+    </LinearLayout>
 
 </RelativeLayout>

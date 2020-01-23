@@ -48,4 +48,8 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
     }
+
+    public void aboutus(View view) {
+        startActivity(new Intent(MainActivity.this, AboutUs.class));
+    }
 }

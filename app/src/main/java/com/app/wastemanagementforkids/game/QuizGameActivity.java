@@ -36,13 +36,11 @@ public class QuizGameActivity extends AppCompatActivity {
     public void nextPage(View view) {
         viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
     }
-
     class MyAssyncTask extends AsyncTask {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
         }
-
         @Override
         protected Object doInBackground(Object[] objects) {
             String json = null;
@@ -62,7 +60,6 @@ public class QuizGameActivity extends AppCompatActivity {
             }
             return null;
         }
-
         @Override
         protected void onPostExecute(Object o) {
             super.onPostExecute(o);
@@ -105,6 +102,7 @@ public class QuizGameActivity extends AppCompatActivity {
     }
 
     class GamePageAdapter extends FragmentStatePagerAdapter {
+
         public GamePageAdapter(@NonNull FragmentManager fm) {
             super(fm);
         }
@@ -133,6 +131,7 @@ public class QuizGameActivity extends AppCompatActivity {
             }
             return gameItem;
         }
+
         @Override
         public int getCount() {
             return jsonArray.length();

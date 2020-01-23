@@ -135,12 +135,10 @@
                 android:layout_marginTop="80dp"
                 android:background="@drawable/btn"
                 android:text="About Us"
+                android:onClick="aboutus"
                 android:textSize="30sp" />
 
         </RelativeLayout>
-
-
     </RelativeLayout>
-
 </ScrollView>
 
