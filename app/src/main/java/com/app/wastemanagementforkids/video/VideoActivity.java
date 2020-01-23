@@ -1,17 +1,24 @@
 package com.app.wastemanagementforkids.video;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import com.app.wastemanagementforkids.MainActivity;
 import com.app.wastemanagementforkids.R;
+import com.valdesekamdem.library.mdtoast.MDToast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -42,16 +49,30 @@ public class VideoActivity extends AppCompatActivity {
         materialToolbar = findViewById(R.id.video_toolbar);
         setSupportActionBar(materialToolbar);
         setTitle("Videos");
+
+        if (!isNetworkAvailable()) {
+            MDToast.makeText(this, "please connect to internet", MDToast.LENGTH_SHORT, MDToast.TYPE_ERROR);
+            startActivity(new Intent(VideoActivity.this, MainActivity.class));
+            finish();
+        }
     }
 
     public void next(View view) {
-        webView.loadUrl(arrayList.get(count + 1));
-        count++;
+        if (count + 1 >= arrayList.size())
+            MDToast.makeText(this, "Thank You", Toast.LENGTH_LONG, MDToast.TYPE_INFO);
+        else {
+            webView.loadUrl(arrayList.get(count + 1));
+            count++;
+        }
     }
 
     public void previous(View view) {
-        webView.loadUrl(arrayList.get(count - 1));
-        count--;
+        if (count <= 0) {
+            MDToast.makeText(this, "Sorry can't go back", Toast.LENGTH_LONG, MDToast.TYPE_WARNING);
+        } else {
+            webView.loadUrl(arrayList.get(count - 1));
+            count--;
+        }
     }
 
     @SuppressLint("StaticFieldLeak")
@@ -83,7 +104,6 @@ public class VideoActivity extends AppCompatActivity {
             }
             return null;
         }
-
         @Override
         protected void onPostExecute(Object o) {
             super.onPostExecute(o);
@@ -93,4 +113,10 @@ public class VideoActivity extends AppCompatActivity {
 
     }
 
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
 }
