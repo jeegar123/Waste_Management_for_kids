@@ -7,6 +7,7 @@
     tools:context=".study.StudyActivity">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/study_tool_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -22,19 +23,10 @@
             app:titleTextColor="#ffff"
             tools:ignore="UnusedAttribute" />
     </com.google.android.material.appbar.AppBarLayout>
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/content_pager"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
- />
-    <Button
-        android:textColor="#fff"
-        android:background="#0040F5"
-        android:onClick="goToNextPage"
-        android:textSize="25sp"
-        android:layout_below="@id/content_pager"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
 
+    <WebView
+        android:id="@+id/study_webview"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_below="@id/study_tool_layout" />
 </RelativeLayout>
