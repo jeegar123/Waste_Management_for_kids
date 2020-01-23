@@ -24,7 +24,6 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <WebView
-        android:layout_above="@id/lineaar"
         android:layout_alignParentTop="true"
         android:id="@+id/vide_webview"
         android:layout_width="match_parent"

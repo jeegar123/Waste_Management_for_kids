@@ -16,13 +16,10 @@ import com.app.wastemanagementforkids.R;
 import com.squareup.picasso.Picasso;
 
 public class QuizGameFragment extends Fragment {
-    static int v = 0;
     View view;
     ImageView button_option1, button_option2, button_option3, button_option4;
     TextView textQuestion;
     GameItem gameItem;
-
-
     public QuizGameFragment(GameItem gameItem) {
         this.gameItem = gameItem;
     }
@@ -70,7 +67,6 @@ public class QuizGameFragment extends Fragment {
         button_option2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 if (gameItem.getV() == 2) {
                     Toast.makeText(getActivity(), "correct", Toast.LENGTH_SHORT).show();
                 } else {
