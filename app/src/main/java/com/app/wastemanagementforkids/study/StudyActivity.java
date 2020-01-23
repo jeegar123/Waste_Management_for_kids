@@ -1,5 +1,6 @@
 package com.app.wastemanagementforkids.study;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.webkit.WebView;
 
@@ -13,6 +14,7 @@ public class StudyActivity extends AppCompatActivity {
     String lang;
     WebView webView;
 
+    @SuppressLint("SetJavaScriptEnabled")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,11 +28,10 @@ public class StudyActivity extends AppCompatActivity {
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
         if (lang.equals("English")) {
-            webView.loadUrl("http://surrey.recycle.game/");
+            webView.loadUrl("file:///android_asset/english.html");
         } else {
             webView.loadUrl("file:///android_asset/gujarati.html");
         }
-
     }
 
 }

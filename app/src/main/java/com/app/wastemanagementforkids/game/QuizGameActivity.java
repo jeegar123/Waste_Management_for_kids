@@ -30,21 +30,17 @@ public class QuizGameActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_game);
         viewPager = findViewById(R.id.page_mcqview);
-
         new MyAssyncTask().execute();
-
     }
 
     public void nextPage(View view) {
         viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
     }
-
     class MyAssyncTask extends AsyncTask {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
         }
-
         @Override
         protected Object doInBackground(Object[] objects) {
             String json = null;
@@ -64,7 +60,6 @@ public class QuizGameActivity extends AppCompatActivity {
             }
             return null;
         }
-
         @Override
         protected void onPostExecute(Object o) {
             super.onPostExecute(o);
