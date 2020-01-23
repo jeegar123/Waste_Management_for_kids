@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Waste Management for kids</string>
+    <string-array name="lang">
+        <item>English</item>
+        <item>Gujarati</item>
+        <item>Hindi</item>
+
+    </string-array>
 </resources>

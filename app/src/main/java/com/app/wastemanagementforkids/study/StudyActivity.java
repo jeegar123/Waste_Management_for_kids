@@ -26,32 +26,38 @@ public class StudyActivity extends AppCompatActivity {
     JSONArray jsonArray;
     ViewPager viewPager;
     Toolbar materialToolbar;
+    String lang;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_study);
         viewPager=findViewById(R.id.content_pager);
         materialToolbar = findViewById(R.id.study_toolbar);
+        lang = getIntent().getStringExtra("lang");
         setTitle("Study");
         setSupportActionBar(materialToolbar);
         new MyAssyncTask().execute();
     }
-
     public void goToNextPage(View view) {
         viewPager.setCurrentItem(viewPager.getCurrentItem()+1);
     }
-
     class MyAssyncTask extends AsyncTask {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
         }
-
         @Override
         protected Object doInBackground(Object[] objects) {
             String json = null;
             try {
-                InputStream is = getAssets().open("content.json");
+                InputStream is;
+                if (lang.equals("Gujarati")) {
+                    is = getAssets().open("gujarati.json");
+                } else if (lang.equals("English")) {
+                    is = getAssets().open("content.json");
+                } else {
+                    is = getAssets().open("1content.json");
+                }
                 int size = is.available();
                 byte[] bytes = new byte[size];
                 is.read(bytes);
