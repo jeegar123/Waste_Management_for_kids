@@ -9,9 +9,8 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import com.app.wastemanagementforkids.game.GameActivity;
 import com.app.wastemanagementforkids.question_and_answer.QuesAndAnsActivity;
-import com.app.wastemanagementforkids.study.StudyActivity;
+import com.app.wastemanagementforkids.study.Study2Activity;
 import com.app.wastemanagementforkids.video.VideoActivity;
 
 
@@ -31,16 +30,13 @@ public class MainActivity extends AppCompatActivity {
     public void btnClick(View view) {
         switch (view.getId()) {
             case R.id.text_study:
-                startActivity(new Intent(MainActivity.this, StudyActivity.class));
+                startActivity(new Intent(MainActivity.this, Study2Activity.class));
                 break;
             case R.id.text_video:
                 startActivity(new Intent(MainActivity.this, VideoActivity.class));
                 break;
             case R.id.text_question:
                 startActivity(new Intent(MainActivity.this, QuesAndAnsActivity.class));
-                break;
-            case R.id.text_game:
-                startActivity(new Intent(MainActivity.this, GameActivity.class));
                 break;
         }
     }
