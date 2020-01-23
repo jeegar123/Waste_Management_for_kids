@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.app.wastemanagementforkids.R;
+import com.squareup.picasso.Picasso;
 
 public class QuizGameFragment extends Fragment {
     static int v = 0;
@@ -20,6 +21,7 @@ public class QuizGameFragment extends Fragment {
     ImageView button_option1, button_option2, button_option3, button_option4;
     TextView textQuestion;
     GameItem gameItem;
+
 
     public QuizGameFragment(GameItem gameItem) {
         this.gameItem = gameItem;
@@ -50,7 +52,9 @@ public class QuizGameFragment extends Fragment {
         setImage(button_option4, data[3]);
     }
     public void setImage(ImageView im, String url) {
-        new DownloadImage(im, url);
+        Picasso.get()  //Here, this is context.
+                .load(url)  //Url of the image to load.
+                .into(im);
     }
     public void buttonListiner() {
         button_option1.setOnClickListener(new View.OnClickListener() {
