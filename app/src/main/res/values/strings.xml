@@ -3,7 +3,5 @@
     <string-array name="lang">
         <item>English</item>
         <item>Gujarati</item>
-        <item>Hindi</item>
-
     </string-array>
 </resources>

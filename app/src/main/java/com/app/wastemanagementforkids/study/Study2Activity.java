@@ -28,9 +28,6 @@ public class Study2Activity extends AppCompatActivity {
         } else if (langauage.equals("Gujarati")) {
             startActivity(new Intent(Study2Activity.this, StudyActivity.class).putExtra("lang", "Gujarati"));
             finish();
-        } else {
-            startActivity(new Intent(Study2Activity.this, StudyActivity.class).putExtra("lang", "Hindi"));
-            finish();
         }
     }
 }

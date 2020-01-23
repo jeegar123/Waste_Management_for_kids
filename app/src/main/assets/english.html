@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link crossorigin="anonymous"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          rel="stylesheet">
+    <script crossorigin="anonymous"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script crossorigin="anonymous"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script crossorigin="anonymous"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <style>
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 30%;
+  height: 300px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #FB6311;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: 300px;
+}
+
+    </style>
+</head>
+<body>
+
+<div class="tab">
+    <button class="tablinks" id="defaultOpen" onclick="openCity(event, 'London')">What Is Waste
+    </button>
+    <button class="tablinks" onclick="openCity(event, 'Paris')">Kind Of Waste</button>
+    <button class="tablinks" onclick="openCity(event, 'Tokyo')">Source Of Waste</button>
+    <button class="tablinks" onclick="openCity(event, 'wd')">Waste Disposel</button>
+    <button class="tablinks" onclick="openCity(event, 'recycle')">Recycling</button>
+    <button class="tablinks" onclick="openCity(event, 'eofw')">Effect Of Waste</button>
+
+</div>
+
+<div class="tabcontent" id="London" style="height:480px;">
+    <div style="height:1000px;">
+        <h1>Introduction — All About Waste.</h1>
+        <p>Waste has been a major environmental issue everywhere since the industrial revolution.
+            Besides the waste we create at home, school and other public places, there are also
+            those from hospitals, industries, farms and other sources. Humans rely so much on
+            material things and they all (almost) end up as waste. And hey — where does the waste
+            end up?</p>
+        <h1>What is waste (trash, garbage, rubbish, refuse)</h1>
+        <h5>What is the difference between trash and garbage?</h5>
+        <p>Trash: Solid waste form places like your atic, backyard or study. Trash items include
+            paper and card boxes and the like.</p>
+        <p> Garbage: This is waste from kitchen and bathroom. They also include waste from cooking
+            food and from food storage facilities.</p>
+        <p>Waste are items we (individuals, offices, schools, industries, hospitals) don’t need and
+            discard. Sometimes there are things we have that the law requires us to discard because
+            they can be harmful. Waste comes in infinite sizes—some can be as small as an old
+            toothbrush, or as large as the body of a school bus.</p>
+
+    </div>
+    <br>
+
+</div>
+
+<div class="tabcontent" id="Paris" style="height:880px;">
+    <h1>Types of waste</h1>
+    <p>Generally, waste could be liquid or solid waste. Both of them could be hazardous. Liquid and
+        solid waste types can also be grouped into organic, re-usable and recyclable waste.
+        Let us see some details below:</p>
+    <h1>Liquid type:</h1>
+    <p>Waste can come in non-solid form. Some solid waste can also be converted to a liquid waste
+        form for disposal. It includes point source and non-point source discharges such as storm
+        water and wastewater. Examples of liquid waste include wash water from homes, liquids used
+        for cleaning in industries and waste detergents.</p>
+    <h1>Solid type:</h1>
+    <p>Solid waste predominantly, is any garbage, refuse or rubbish that we make in our homes and
+        other places. These include old car tires, old newspapers, broken furniture and even food
+        waste. They may include any waste that is non-liquid.</p>
+    <h1>Hazardous type:</h1>
+    <p>Hazardous or harmful waste are those that potentially threaten public health or the
+        environment. Such waste could be inflammable (can easily catch fire), reactive (can easily
+        explode), corrosive (can easily eat through metal) or toxic (poisonous to human and
+        animals). In many countries, it is required by law to involve the appropriate authority to
+        supervise the disposal of such hazardous waste. Examples include fire extinguishers, old
+        propane tanks, pesticides, mercury-containing equipment (e.g, thermostats) and lamps (e.g.
+        fluorescent bulbs) and batteries.</p>
+    <h1>Organic type:</h1>
+    <p>Organic waste comes from plants or animals sources. Commonly, they include food waste, fruit
+        and vegetable peels, flower trimmings and even dog poop can be classified as organic waste.
+        They are biodegradable (this means they are easily broken down by other organisms over time
+        and turned into manure). Many people turn their organic waste into compost and use them in
+        their gardens.</p>
+    <h1>Recyclable type:</h1>
+    <p>Recycling is processing used materials (waste) into new, useful products. This is done to
+        reduce the use of raw materials that would have been used. Waste that can be potentially
+        recycled is termed "Recyclable waste". Aluminum products (like soda, milk and tomato cans),
+        Plastics (grocery shopping bags, plastic bottles), Glass products (like wine and beer
+        bottles, broken glass), Paper products (used envelopes, newspapers and magazines, cardboard
+        boxes) can be recycled and fall into this category.</p>
+</div>
+</div>
+
+<div class="tabcontent" id="Tokyo" style="height:980px;">
+    <h1>Sources of waste Municipal sources of waste:</h1>
+    <p>This includes trash or garbage from households, schools, offices, market places, restaurants
+        and other public places.They include everyday items like food debris, used plastic bags,
+        soda cans and plastic water bottles, broken furniture, grass clippings, product packaging,
+        broken home appliances and clothing.
+    </p>
+    <img alt="" src=".//img/municiapl-solid-waste-composition.jpg"/>
+    <h1> Medical/Clinical sources of waste</h1>
+    <p>Medical/clinical waste, normally refers to waste produced from health care facilities, such
+        as hospitals, clinics, surgical theaters, veterinary hospitals and labs. They tend to be
+        classified as hazard waste rather than general waste.Items in this group include surgical
+        items, pharmaceuticals, blood, body parts, wound dressing materials, needles and syringes
+    </p>
+    <h1>Agricultural sources of waste:</h1>
+    <p>Typically, this is waste generated by agricultural activities. These include horticulture,
+        fruit growing, seed growing, livestock breeding, market gardens and seedling nurseries.Waste
+        items in this group include empty pesticide containers, old silage wrap, out of date
+        medicines and wormers, used tires, surplus milk, cocoa pods and corn husks.</p>
+    <h1>End-of-life Automobiles:</h1>
+    <p>
+        <img alt="" src="./img/junk-and-car-scrap.jpg"/>
+    <p>When cars are all old and not working again, where do they end up? Many people just leave
+        them to rust in the fields, but there is a better way to deal with them. In many cities,
+        these vehicles are sent to the plant, where all the removable parts are taken out for
+        recycling. The rest is flattened up and shredded into peices for recycling. The last bits
+        that cannot be used again is sent to a landfill.</p>
+    </p>
+</div>
+
+<div class="tabcontent" id="wd" style="height:980px;">
+    <h1>How is waste treated and disposed off?</h1>
+    <p>Waste management simply means the collection, transport, processing or disposal, managing and
+        monitoring of waste materials to minimize its' consequences on humans and environment.</p>
+    <img alt="" src="./img/recycling-truck.jpg"/>
+    <p>There are several methods of managing all the various types of waste. Some of these methods
+        cause additional harm to the environment, but not doing anything is not an option.Let us see
+        below two common ways of managing waste:</p>
+    <h1>Incineration method of waste management:</h1>
+    <p>This simply means burning waste. This method is common in countries with limited landfill
+        space. Incineration chambers can be small for domestic use, but ther are large ones for
+        municipal use as well. It is great for treating waste with contamination (like those from
+        hospitals) and hazardous waste from factories, but the method produces too much carbon
+        dioxide . Modern incineration processes are more efficient and release less dioxin than home
+        fireplaces and backyard barbecues. This method is very common in Denmark, Germany and the
+        Netherlands. This method is effective, but expensive.</p>
+    <h1>Sanitary Landfills as waste disposal:</h1>
+    <p>Generally, this term means a large piece of land away from living places where all the waste
+        from a town is deposited. But there is more to landfills. Proper landfill management
+        involves sorting out all the waste (waste separation), and sending only the waste that
+        cannot be recycled and composted to the site.Proper landfills, are also lined at the bottom
+        to minimize the leakage of soil pollutants and other toxins from getting into the water
+        table. This method is effective, but expensive and difficult.In many towns, sorting is not
+        done, and all the waste (paper, food, diapers, glass) is mixed up and deposited. That is a
+        problem because, glass, and plastics take thousands of years to decompose. Additionally, the
+        landfills soon become full, smelly and unsafe for the environment.Proper waste management is
+        not cheap, but it is something we all have to get involved and discuss it. The effect of not
+        getting involved can be catastrophic to our health and environment. Read about waste source
+        reduction here</p>
+</div>
+
+<div class="tabcontent" id="recycle" style="height:1380px;">
+    <h1>What is Waste Recycling?</h1>
+    <p>Recycling is processing used materials (waste) into new, useful products. This is done to
+        reduce the use of raw materials that would have been used. Recycling also uses less energy
+        and and great way of controlling air, water and land pollution.
+
+        Effective recycling starts with household (or the place where the waste was created). In
+        many serious countries, the authorities help households with bin bags with labels on them.
+        Households then sort out the waste themselves and place them in the right bags for
+        collection. This makes the work less difficult.</p>
+    <img alt="" src="./img/recycling-for-kids.jpg">
+    <h1>Paper waste:</h1>
+    <p>Paper waste items include books, newspapers, magazines, cardboard boxes and envelopes.</p>
+    <h1>Plastic waste:</h1>
+    <p>Items include plastic bags, water bottles, rubber bags and plastic wrappers.</p>
+    <h1>Glass waste:</h1>
+    <p>All glass products like broken bottles, beer and wine bottles can be recycled.</p>
+    <h1>Aluminium waste:</h1>
+    <p>Cans from soda drink, tomato, fruit cans and all other cans can be recycled.</p>
+    <p>When these are collected, the are sent to the recycling unit, where all the waste from each
+        type are combined, crushed, melted and processed into new materials.</p>
+
+    <h1>Importance and benefits of waste recycling</h1>
+    <h3>Recycling helps protect the environment:</h3>
+    <p>This is because the recyclable waste materials would have been burned or ended up in the
+        landfill. Pollution of the air, land, water and soil is reduced.</p>
+    <h3>Recycling conserves natural resources:</h3>
+    <p>Recycling more waste means that we do not depend too much on raw (natural) resources, which
+        are already massively depleted.</p>
+    <h3>Recycling saves energy:</h3>
+    <p>It takes more energy to produce items with raw materials than from recycling used materials.
+        This means we are more energy efficient and the prices of products can come down.</p>
+    <h3>Recycling creates jobs:</h3><br>
+    <p> People are employed to collect, sort and work in recycling companies. Others also get jobs
+        with businesses that work with these recycling units. There can be a ripple of jobs in the
+        municipality.</p>
+</div>
+
+<div class="tabcontent" id="eofw" style="height:1380px;">
+    <h1>Effects of poor waste disposal.</h1>
+    <p>Imagine we all throw garbage, junk and rubbish away anyhow. Imagine there was no authority to
+        supervise waste management activities from all the sources mentioned earlier. Imagine we all
+        just sent our rubbish to the landfill, or just dumped them in a nearby river. What do you
+        think will happen? A disaster!</p>
+    <h1>Environmental Effects</h1>
+    <h3>Surface water contamination:</h3>
+    <p>Waste that end up in water bodies negatively change the chemical composition of the water.
+        Technically, this is called water pollution. This will affect all ecosystems existing in the
+        water. It can also cause harm to animals that drink from such polluted water.</p>
+    <h3>Soil contamination:</h3>
+    <p>Hazardous chemicals that get into the soil (contaminants) can harm plants when they take up
+        the contamination through their roots. If humans eat plants and animals that have been in
+        contact with such polluted soils, there can be negative impact on their health.</p>
+    <h3>Pollution:</h3>
+    <p>Bad waste management practices can result in land and air pollution and can cause respiratory
+        problems and other adverse health effects as contaminants are absorbed from the lungs into
+        other parts of the body.</p>
+    <h3>Leachate</h3>
+    <p>Liquid that forms as water trickles through contaminated areas is called Leachate. It forms
+        very harmful mixture of chemicals that may result in hazardous substances entering surface
+        water, groundwater or soil.</p>
+    <h1>Economic Effects</h1>
+    <h3>Municipal wellbeing:</h3>
+    <p>Everyone wants to live and visit places that are clean, fresh and healthy. A city with poor
+        sanitation, smelly and with waste matter all over the place do not attract good people,
+        investors and tourists. Such cities tend to have poor living standards.</p><br>
+    <h3>Recycling revenue:</h3>
+    <p>Cities that do not invest in recycling and proper waste control miss out on revenue from
+        recycling. They also miss out on job opportunities that come from recycling, composting and
+        businesses that work with them.</p>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+</script>
+
+</body>
+</html> 

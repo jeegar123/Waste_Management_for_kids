@@ -1,0 +1,42 @@
+[
+  {
+    "Q": "Wet/Organic waste",
+    "I": [
+      "green.jpg",
+      "blue.jpg",
+      "yellow.jpg",
+      "red.jpg"
+    ],
+    "A": 1
+  },
+  {
+    "Q": "Dry/Recyclable waste",
+    "I": [
+      "green.jpg",
+      "blue.jpg",
+      "yellow.jpg",
+      "red.jpg"
+    ],
+    "A": 3
+  },
+  {
+    "Q": "Electronic waste",
+    "I": [
+      "green.jpg",
+      "blue.jpg",
+      "yellow.jpg",
+      "red.jpg"
+    ],
+    "A": 2
+  },
+  {
+    "Q": "Reject waste",
+    "I": [
+      "green.jpg",
+      "blue.jpg",
+      "yellow.jpg",
+      "red.jpg"
+    ],
+    "A": 4
+  }
+]
