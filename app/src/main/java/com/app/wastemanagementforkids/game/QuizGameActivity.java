@@ -36,6 +36,11 @@ public class QuizGameActivity extends AppCompatActivity {
     public void nextPage(View view) {
         viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
     }
+
+    public void previous(View view) {
+        viewPager.setCurrentItem(viewPager.getCurrentItem() - 1);
+    }
+
     class MyAssyncTask extends AsyncTask {
         @Override
         protected void onPreExecute() {

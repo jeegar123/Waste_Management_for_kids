@@ -22,8 +22,9 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_weight="1"
-            android:onClick="previousPage"
-            android:text="previous" />
+            android:onClick="previous"
+            android:text="previous"
+            tools:ignore="OnClick" />
 
         <Button
             android:layout_width="match_parent"

@@ -11,9 +11,13 @@
 
         <TextView
             android:id="@+id/question"
+            android:layout_marginBottom="20dp"
+            android:textAlignment="center"
+            android:textColor="#9C27B0"
+            android:textSize="30sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="25sp" />
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -29,35 +33,30 @@
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
+                    android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1">
-
-                    <RelativeLayout
-                        android:layout_width="120dp"
-                        android:layout_height="120dp">
 
                         <ImageView
                             android:id="@+id/option_imag1"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent" />
-                    </RelativeLayout>
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp" />
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1">
 
-                    <RelativeLayout
-                        android:layout_width="120dp"
-                        android:layout_height="120dp">
+
 
                         <ImageView
                             android:id="@+id/option_imag2"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent" />
-                    </RelativeLayout>
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp" />
+
 
                 </androidx.cardview.widget.CardView>
 
@@ -71,36 +70,31 @@
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
+                    android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1">
 
-                    <RelativeLayout
-
-                        android:layout_width="120dp"
-                        android:layout_height="120dp">
 
                         <ImageView
                             android:id="@+id/option_imag3"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent" />
-                    </RelativeLayout>
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp" />
+
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1">
 
-                    <RelativeLayout
-                        android:layout_width="120dp"
-                        android:layout_height="120dp">
 
-                        <ImageView
+                    <ImageView
                             android:id="@+id/option_imag4"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent" />
-                    </RelativeLayout>
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp" />
+
 
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
