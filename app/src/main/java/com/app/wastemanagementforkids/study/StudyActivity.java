@@ -30,7 +30,7 @@ public class StudyActivity extends AppCompatActivity {
         if (lang.equals("English")) {
             webView.loadUrl("file:///android_asset/english.html");
         } else {
-            webView.loadUrl("https://getlivedata.000webhostapp.com/gujarati_content/index.html");
+            webView.loadUrl("file:///android_asset/gujarati.html");
         }
     }
 
