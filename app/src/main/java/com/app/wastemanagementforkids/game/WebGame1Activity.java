@@ -18,7 +18,7 @@ public class WebGame1Activity extends AppCompatActivity {
         webView = findViewById(R.id.webview_game1);
 
         // enter url
-        webView.loadUrl("");
+        webView.loadUrl("https://surrey.recycle.game/");
 
         webView.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
         webView.getSettings().setJavaScriptEnabled(true);

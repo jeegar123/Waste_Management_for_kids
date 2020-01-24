@@ -9,8 +9,7 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import com.app.wastemanagementforkids.game.GameActivity;
-import com.app.wastemanagementforkids.game.QuizGameActivity;
+import com.app.wastemanagementforkids.game.GameHomeActivity;
 import com.app.wastemanagementforkids.question_and_answer.QuesAndAnsActivity;
 import com.app.wastemanagementforkids.study.Study2Activity;
 import com.app.wastemanagementforkids.video.VideoActivity;
@@ -41,10 +40,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, QuesAndAnsActivity.class));
                 break;
             case R.id.text_game:
-                startActivity(new Intent(MainActivity.this, GameActivity.class));
-                break;
-            case R.id.text_game2:
-                startActivity(new Intent(MainActivity.this, QuizGameActivity.class));
+                startActivity(new Intent(MainActivity.this, GameHomeActivity.class));
                 break;
         }
     }
