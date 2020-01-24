@@ -15,7 +15,8 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".game.WebGame2Activity"></activity>
+        <activity android:name=".game.GameHomeActivity"></activity>
+        <activity android:name=".game.WebGame2Activity" />
         <activity android:name=".game.WebGame1Activity" />
         <activity
             android:name=".AboutUs"
