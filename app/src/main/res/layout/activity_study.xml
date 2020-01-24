@@ -6,27 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".study.StudyActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/study_tool_layout"
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/content_pager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="600dp"
         android:layout_alignParentTop="true"
-        app:expanded="false">
+ />
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/study_toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:elevation="6dp"
-            app:elevation="10dp"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            app:titleTextColor="#ffff"
-            tools:ignore="UnusedAttribute" />
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <WebView
-        android:id="@+id/study_webview"
-        android:layout_height="match_parent"
+    <Button
+        android:textColor="#fff"
+        android:background="#FFE47A"
+        android:onClick="goToNextPage"
+        android:textSize="25sp"
+        android:text="Click Here to Change \nor \nSwipe to change"
+        android:layout_below="@id/content_pager"
+        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
-        android:layout_below="@id/study_tool_layout" />
+        android:layout_height="wrap_content"/>
+
 </RelativeLayout>
