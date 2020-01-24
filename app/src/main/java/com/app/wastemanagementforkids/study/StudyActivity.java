@@ -13,7 +13,6 @@ public class StudyActivity extends AppCompatActivity {
     Toolbar materialToolbar;
     String lang;
     WebView webView;
-
     @SuppressLint("SetJavaScriptEnabled")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
