@@ -30,7 +30,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="5dp">
+            android:layout_marginTop="100dp">
 
             <com.airbnb.lottie.LottieAnimationView
                 android:id="@+id/school"
@@ -67,7 +67,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"
                             android:onClick="btnClick"
-                            android:src="@drawable/book" />
+                            android:src="@drawable/study" />
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
