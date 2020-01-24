@@ -5,15 +5,20 @@ import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.app.wastemanagementforkids.R;
 
 public class ChangeGameLangActivity extends AppCompatActivity {
+    Toolbar materialToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_change_game_lang);
+        materialToolbar = findViewById(R.id.changehome_game_toolbar);
+        setSupportActionBar(materialToolbar);
+        setTitle("Quiz");
     }
 
 

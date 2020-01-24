@@ -7,6 +7,7 @@ import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
@@ -24,6 +25,7 @@ import java.io.InputStream;
 public class QuizGameActivity extends AppCompatActivity {
     ViewPager viewPager;
     JSONArray jsonArray;
+    Toolbar materialToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,10 @@ public class QuizGameActivity extends AppCompatActivity {
         setContentView(R.layout.activity_quiz_game);
         viewPager = findViewById(R.id.page_mcqview);
         new MyAssyncTask().execute();
+        materialToolbar = findViewById(R.id.change_quiz_toolbar);
+        setSupportActionBar(materialToolbar);
+        setTitle("Quiz");
+
     }
 
     public void nextPage(View view) {

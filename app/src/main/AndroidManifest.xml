@@ -18,11 +18,21 @@
         <activity
             android:name=".game.GameHomeActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"></activity>
-        <activity android:name=".game.ChangeGameLangActivity" />
-        <activity android:name=".question_and_answer.ChangeLangActivity" />
-        <activity android:name=".game.WebGame2Activity" />
-        <activity android:name=".game.WebGame1Activity" />
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+        <activity
+            android:name=".game.ChangeGameLangActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+        <activity
+            android:name=".question_and_answer.ChangeLangActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+        <activity
+            android:name=".game.WebGame2Activity"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+        <activity
+            android:name=".game.WebGame1Activity"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
         <activity
             android:name=".AboutUs"
             android:screenOrientation="portrait"

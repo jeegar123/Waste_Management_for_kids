@@ -18,6 +18,7 @@ public class Study2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_study2);
         toolbar = findViewById(R.id.study2_toolbar);
         setSupportActionBar(toolbar);
+        setTitle("Select Language");
     }
 
     public void english(View view) {
