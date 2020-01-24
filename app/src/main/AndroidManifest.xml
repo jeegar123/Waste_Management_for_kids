@@ -8,14 +8,20 @@
 
     <application
         android:allowBackup="true"
+        android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
-        tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".game.GameHomeActivity"></activity>
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:targetApi="m">
+        <activity android:name=".game.ChangeGameLangActivity"></activity>
+        <activity android:name=".question_and_answer.ChangeLangActivity" />
+        <activity
+            android:name=".game.GameHomeActivity"
+            android:screenOrientation="portrait" />
         <activity android:name=".game.WebGame2Activity" />
         <activity android:name=".game.WebGame1Activity" />
         <activity
@@ -40,6 +46,7 @@
             android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
         <activity
             android:name=".study.StudyActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
         <activity
             android:name=".study.Study2Activity"

@@ -26,6 +26,8 @@ public class GameActivity extends AppCompatActivity {
     JSONArray jsonArray;
     ViewPager viewPager;
     Toolbar materialToolbar;
+    String lang;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +36,7 @@ public class GameActivity extends AppCompatActivity {
         materialToolbar = findViewById(R.id.game_toolbar);
         setSupportActionBar(materialToolbar);
         setTitle("Quiz");
-
+        lang = getIntent().getStringExtra("lang");
         viewPager = findViewById(R.id.pageview);
         new MyAssyncTask().execute();
     }
@@ -53,7 +55,11 @@ public class GameActivity extends AppCompatActivity {
         protected Object doInBackground(Object[] objects) {
             String json = null;
             try {
-                InputStream is = getAssets().open("quiz.json");
+                InputStream is;
+                if (lang.equals("English"))
+                    is = getAssets().open("quiz.json");
+                else
+                    is = getAssets().open("ques_ans_answer_guj.json");
                 int size = is.available();
                 byte[] bytes = new byte[size];
                 is.read(bytes);

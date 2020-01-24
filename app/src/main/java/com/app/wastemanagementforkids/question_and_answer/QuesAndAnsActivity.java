@@ -21,7 +21,7 @@ public class QuesAndAnsActivity extends AppCompatActivity {
     QuestionAdapter questionAdapter;
     RecyclerView recyclerView;
     Toolbar toolbar;
-
+    String lang;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +29,7 @@ public class QuesAndAnsActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.ques_toolbar);
         setSupportActionBar(toolbar);
         setTitle("Question And Answer");
+        lang = getIntent().getStringExtra("lang");
         new MyAssyncTask().execute();
         recyclerView = findViewById(R.id.recycle_ques_ans);
     }
@@ -43,7 +44,12 @@ public class QuesAndAnsActivity extends AppCompatActivity {
         protected Object doInBackground(Object[] objects) {
             String json = null;
             try {
-                InputStream is = getAssets().open("ques_ans.json");
+                InputStream is;
+                if (lang.equals("English")) {
+                    is = getAssets().open("ques_ans.json");
+                } else {
+                    is = getAssets().open("ques_ans_answer_guj.json");
+                }
                 int size = is.available();
                 byte[] bytes = new byte[size];
                 is.read(bytes);
@@ -68,6 +74,5 @@ public class QuesAndAnsActivity extends AppCompatActivity {
             recyclerView.setLayoutManager(layoutManager);
             recyclerView.setAdapter(questionAdapter);
         }
-
     }
 }

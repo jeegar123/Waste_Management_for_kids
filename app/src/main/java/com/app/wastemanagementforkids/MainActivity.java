@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.app.wastemanagementforkids.game.GameHomeActivity;
-import com.app.wastemanagementforkids.question_and_answer.QuesAndAnsActivity;
+import com.app.wastemanagementforkids.question_and_answer.ChangeLangActivity;
 import com.app.wastemanagementforkids.study.Study2Activity;
 import com.app.wastemanagementforkids.video.VideoActivity;
 
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, VideoActivity.class));
                 break;
             case R.id.text_question:
-                startActivity(new Intent(MainActivity.this, QuesAndAnsActivity.class));
+                startActivity(new Intent(MainActivity.this, ChangeLangActivity.class));
                 break;
             case R.id.text_game:
                 startActivity(new Intent(MainActivity.this, GameHomeActivity.class));

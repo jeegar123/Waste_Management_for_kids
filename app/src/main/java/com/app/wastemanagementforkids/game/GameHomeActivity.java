@@ -19,7 +19,7 @@ public class GameHomeActivity extends AppCompatActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.text_home_quiz:
-                startActivity(new Intent(GameHomeActivity.this, GameActivity.class));
+                startActivity(new Intent(GameHomeActivity.this, ChangeGameLangActivity.class));
                 break;
             case R.id.text_home_quiz2:
                 startActivity(new Intent(GameHomeActivity.this, QuizGameActivity.class));
