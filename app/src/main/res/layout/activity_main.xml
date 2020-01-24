@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -29,7 +28,18 @@
             android:layout_height="match_parent"
             android:layout_marginTop="5dp">
 
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/school"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="10dp"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="school_bus.json"
+                app:lottie_loop="true" />
+
             <LinearLayout
+                android:layout_below="@id/school"
                 android:id="@+id/main_linearlayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -102,7 +112,7 @@
                             android:layout_height="match_parent"
                             android:layout_margin="10dp"
                             android:onClick="btnClick"
-                            android:src="@drawable/game" />
+                            android:src="@drawable/gameicon" />
                     </androidx.cardview.widget.CardView>
                 </LinearLayout>
 
@@ -113,10 +123,10 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/main_linearlayout"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="80dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/btn"
-                android:text="About Us"
                 android:onClick="aboutus"
+                android:text="About Us"
                 android:textSize="30sp" />
 
         </RelativeLayout>
