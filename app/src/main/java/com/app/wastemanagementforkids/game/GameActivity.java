@@ -1,5 +1,6 @@
 package com.app.wastemanagementforkids.game;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -42,7 +43,22 @@ public class GameActivity extends AppCompatActivity {
     }
 
     public void goToNextPage(View view) {
-        viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
+        if (viewPager.getCurrentItem() + 1 >= jsonArray.length()) {
+            startActivity(new Intent(GameActivity.this, GameHomeActivity.class));
+            finish();
+        } else {
+            viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
+        }
+
+    }
+
+    public void goToPreviousPage(View view) {
+        if (viewPager.getCurrentItem() == 0) {
+            startActivity(new Intent(GameActivity.this, GameHomeActivity.class));
+            finish();
+        } else {
+            viewPager.setCurrentItem(viewPager.getCurrentItem() - 1);
+        }
     }
 
     class MyAssyncTask extends AsyncTask {
@@ -59,7 +75,7 @@ public class GameActivity extends AppCompatActivity {
                 if (lang.equals("English"))
                     is = getAssets().open("quiz.json");
                 else
-                    is = getAssets().open("ques_ans_answer_guj.json");
+                    is = getAssets().open("quiz_guj.json");
                 int size = is.available();
                 byte[] bytes = new byte[size];
                 is.read(bytes);

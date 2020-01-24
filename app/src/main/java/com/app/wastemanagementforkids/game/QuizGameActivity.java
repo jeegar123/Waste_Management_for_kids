@@ -1,5 +1,6 @@
 package com.app.wastemanagementforkids.game;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -26,12 +27,14 @@ public class QuizGameActivity extends AppCompatActivity {
     ViewPager viewPager;
     JSONArray jsonArray;
     Toolbar materialToolbar;
+    String lang;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_game);
         viewPager = findViewById(R.id.page_mcqview);
+        lang = getIntent().getStringExtra("lang");
         new MyAssyncTask().execute();
         materialToolbar = findViewById(R.id.change_quiz_toolbar);
         setSupportActionBar(materialToolbar);
@@ -40,11 +43,22 @@ public class QuizGameActivity extends AppCompatActivity {
     }
 
     public void nextPage(View view) {
-        viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
+        if (viewPager.getCurrentItem() + 1 >= jsonArray.length()) {
+            startActivity(new Intent(QuizGameActivity.this, GameHomeActivity.class));
+            finish();
+        } else {
+            viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
+        }
     }
 
     public void previous(View view) {
-        viewPager.setCurrentItem(viewPager.getCurrentItem() - 1);
+
+        if (viewPager.getCurrentItem() == 0) {
+            startActivity(new Intent(QuizGameActivity.this, GameHomeActivity.class));
+            finish();
+        } else {
+            viewPager.setCurrentItem(viewPager.getCurrentItem() - 1);
+        }
     }
 
     class MyAssyncTask extends AsyncTask {
@@ -52,11 +66,16 @@ public class QuizGameActivity extends AppCompatActivity {
         protected void onPreExecute() {
             super.onPreExecute();
         }
+
         @Override
         protected Object doInBackground(Object[] objects) {
             String json = null;
             try {
-                InputStream is = getAssets().open("game.json");
+                InputStream is;
+                if (lang.equals("English"))
+                    is = getAssets().open("game.json");
+                else
+                    is = getAssets().open("game_guj.json");
                 int size = is.available();
                 byte[] bytes = new byte[size];
                 is.read(bytes);
@@ -71,6 +90,7 @@ public class QuizGameActivity extends AppCompatActivity {
             }
             return null;
         }
+
         @Override
         protected void onPostExecute(Object o) {
             super.onPostExecute(o);

@@ -43,8 +43,7 @@
             android:layout_weight="1"
             android:onClick="previous"
             android:layout_margin="10dp"
-            android:text="Previous"
-            android:textSize="25sp" />
+            android:text="Previous" />
 
         <Button
             android:layout_width="match_parent"
@@ -52,7 +51,6 @@
             android:layout_weight="1"
             android:onClick="next"
             android:layout_margin="10dp"
-            android:text="Next"
-            android:textSize="25sp" />
+            android:text="Next" />
     </LinearLayout>
 </RelativeLayout>

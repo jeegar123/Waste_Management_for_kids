@@ -40,7 +40,7 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:background="#B30B30"
-            android:onClick="goToNextPage"
+            android:onClick="goToPreviousPage"
             android:text="Previous"
             android:textColor="#fff" />
         <Button

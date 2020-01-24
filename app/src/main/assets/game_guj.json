@@ -1,0 +1,42 @@
+[
+  {
+    "Q": "ભીનું / કાર્બનિક કચરો",
+    "I": [
+      "https://getlivedata.000webhostapp.com/green.jpg",
+      "https://getlivedata.000webhostapp.com/yellow.jpg",
+      "https://getlivedata.000webhostapp.com/blue.jpg",
+      "https://getlivedata.000webhostapp.com/red.jpg"
+    ],
+    "A": 1
+  },
+  {
+    "Q": "સુકા / ફરી વાપરી શકાય એવું કચરો",
+    "I": [
+      "https://getlivedata.000webhostapp.com/green.jpg",
+      "https://getlivedata.000webhostapp.com/yellow.jpg",
+      "https://getlivedata.000webhostapp.com/blue.jpg",
+      "https://getlivedata.000webhostapp.com/red.jpg"
+    ],
+    "A": 3
+  },
+  {
+    "Q": "ઇલેક્ટ્રોનિક કચરો",
+    "I": [
+      "https://getlivedata.000webhostapp.com/green.jpg",
+      "https://getlivedata.000webhostapp.com/yellow.jpg",
+      "https://getlivedata.000webhostapp.com/blue.jpg",
+      "https://getlivedata.000webhostapp.com/red.jpg"
+    ],
+    "A": 2
+  },
+  {
+    "Q": "નકાર કચરો",
+    "I": [
+      "https://getlivedata.000webhostapp.com/green.jpg",
+      "https://getlivedata.000webhostapp.com/yellow.jpg",
+      "https://getlivedata.000webhostapp.com/blue.jpg",
+      "https://getlivedata.000webhostapp.com/red.jpg"
+    ],
+    "A": 4
+  }
+]

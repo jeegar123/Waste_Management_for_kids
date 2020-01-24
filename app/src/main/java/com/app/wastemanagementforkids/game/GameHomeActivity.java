@@ -27,7 +27,7 @@ public class GameHomeActivity extends AppCompatActivity {
                 startActivity(new Intent(GameHomeActivity.this, ChangeGameLangActivity.class));
                 break;
             case R.id.text_home_quiz2:
-                startActivity(new Intent(GameHomeActivity.this, QuizGameActivity.class));
+                startActivity(new Intent(GameHomeActivity.this, GameChangeLang2Activity.class));
                 break;
             case R.id.text_home_webgame1:
                 startActivity(new Intent(GameHomeActivity.this, WebGame1Activity.class));

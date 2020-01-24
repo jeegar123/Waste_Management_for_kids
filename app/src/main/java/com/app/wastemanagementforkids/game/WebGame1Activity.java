@@ -17,7 +17,7 @@ public class WebGame1Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web_game1);
-        materialToolbar = findViewById(R.id.webview_game2_toolbar);
+        materialToolbar = findViewById(R.id.webview_game1_toolbar);
         setSupportActionBar(materialToolbar);
         setTitle("Game");
 
