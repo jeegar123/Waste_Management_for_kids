@@ -1,12 +1,17 @@
 package com.app.wastemanagementforkids.game;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
@@ -27,6 +32,7 @@ public class QuizGameActivity extends AppCompatActivity {
     ViewPager viewPager;
     JSONArray jsonArray;
     Toolbar materialToolbar;
+    TextView displayMarks;
     String lang;
 
     @Override
@@ -34,39 +40,56 @@ public class QuizGameActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_game);
         viewPager = findViewById(R.id.page_mcqview);
+        displayMarks = findViewById(R.id.text_display_marks);
         lang = getIntent().getStringExtra("lang");
         new MyAssyncTask().execute();
         materialToolbar = findViewById(R.id.change_quiz_toolbar);
         setSupportActionBar(materialToolbar);
         setTitle("Quiz");
-
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     public void nextPage(View view) {
         if (viewPager.getCurrentItem() + 1 >= jsonArray.length()) {
-            startActivity(new Intent(QuizGameActivity.this, GameHomeActivity.class));
-            finish();
+            new AlertDialog.Builder(this)
+                    .setMessage("Do want to close it?")
+                    .setPositiveButton("confirm", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int whichButton) {
+                            startActivity(new Intent(QuizGameActivity.this, GameHomeActivity.class));
+                            finish();
+                        }
+                    })
+                    .setNegativeButton("close", null).show();
         } else {
             viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
+            displayMarks.setText("Score : " + String.valueOf(QuizGameFragment.ans));
         }
     }
 
     public void previous(View view) {
 
         if (viewPager.getCurrentItem() == 0) {
-            startActivity(new Intent(QuizGameActivity.this, GameHomeActivity.class));
-            finish();
+            new AlertDialog.Builder(this)
+                    .setMessage("Do want to go back?")
+                    .setPositiveButton("back", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int whichButton) {
+                            startActivity(new Intent(QuizGameActivity.this, GameHomeActivity.class));
+                            finish();
+                        }
+                    })
+                    .setNegativeButton("close", null).show();
         } else {
             viewPager.setCurrentItem(viewPager.getCurrentItem() - 1);
         }
     }
 
+
     class MyAssyncTask extends AsyncTask {
+
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
         }
-
         @Override
         protected Object doInBackground(Object[] objects) {
             String json = null;
@@ -90,7 +113,6 @@ public class QuizGameActivity extends AppCompatActivity {
             }
             return null;
         }
-
         @Override
         protected void onPostExecute(Object o) {
             super.onPostExecute(o);
@@ -138,6 +160,7 @@ public class QuizGameActivity extends AppCompatActivity {
             super(fm);
         }
 
+        @RequiresApi(api = Build.VERSION_CODES.KITKAT)
         @NonNull
         @Override
         public Fragment getItem(int position) {

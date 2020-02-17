@@ -27,9 +27,9 @@ public class StudyActivity extends AppCompatActivity {
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
         if (lang.equals("English")) {
-            webView.loadUrl("https://arjunjoshi.000webhostapp.com/Arjun/English/index.html");
+            webView.loadUrl("https://getlivedata.000webhostapp.com/english.html");
         } else {
-            webView.loadUrl("https://arjunjoshi.000webhostapp.com/Arjun/Gujarti/index.html");
+            webView.loadUrl("https://getlivedata.000webhostapp.com/gujarati.html");
         }
     }
 

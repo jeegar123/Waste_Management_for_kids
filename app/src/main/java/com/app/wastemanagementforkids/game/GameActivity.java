@@ -1,5 +1,6 @@
 package com.app.wastemanagementforkids.game;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -7,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
@@ -44,18 +46,33 @@ public class GameActivity extends AppCompatActivity {
 
     public void goToNextPage(View view) {
         if (viewPager.getCurrentItem() + 1 >= jsonArray.length()) {
-            startActivity(new Intent(GameActivity.this, GameHomeActivity.class));
-            finish();
+            new AlertDialog.Builder(this)
+                    .setMessage("Do want to close it?")
+                    .setPositiveButton("confirm", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int whichButton) {
+                            startActivity(new Intent(GameActivity.this, GameHomeActivity.class));
+                            finish();
+                        }
+                    })
+                    .setNegativeButton("close", null).show();
+
         } else {
             viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
         }
-
     }
 
     public void goToPreviousPage(View view) {
         if (viewPager.getCurrentItem() == 0) {
-            startActivity(new Intent(GameActivity.this, GameHomeActivity.class));
-            finish();
+
+            new AlertDialog.Builder(this)
+                    .setMessage("Do want to go back?")
+                    .setPositiveButton("back", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int whichButton) {
+                            startActivity(new Intent(GameActivity.this, GameHomeActivity.class));
+                            finish();
+                        }
+                    })
+                    .setNegativeButton("close", null).show();
         } else {
             viewPager.setCurrentItem(viewPager.getCurrentItem() - 1);
         }

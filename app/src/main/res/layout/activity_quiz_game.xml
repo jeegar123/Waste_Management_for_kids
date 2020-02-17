@@ -7,6 +7,7 @@
     tools:context=".game.QuizGameActivity">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/quiz_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -23,8 +24,22 @@
             tools:ignore="UnusedAttribute" />
     </com.google.android.material.appbar.AppBarLayout>
 
+    <TextView
+        android:id="@+id/text_display_marks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/quiz_toolbar"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="Score : 0"
+        android:textColor="#4527a0"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        tools:ignore="NotSibling" />
 
     <androidx.viewpager.widget.ViewPager
+        android:layout_below="@id/text_display_marks"
         android:id="@+id/page_mcqview"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
