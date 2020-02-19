@@ -77,7 +77,8 @@ public class QuizGameFragment extends Fragment {
 //                    Toast.makeText(getActivity(), "correct", Toast.LENGTH_SHORT).show();
                     final MediaPlayer mp = MediaPlayer.create(view.getContext(), correct);
                     mp.start();
-                    ans++;
+                    button_option1.setEnabled(false);
+                    ans += 10;
                 } else {
                     final MediaPlayer mp = MediaPlayer.create(view.getContext(), wrong);
                     mp.start();
@@ -101,7 +102,8 @@ public class QuizGameFragment extends Fragment {
 //                    Toast.makeText(getActivity(), "correct", Toast.LENGTH_SHORT).show();
                     final MediaPlayer mp = MediaPlayer.create(view.getContext(), correct);
                     mp.start();
-                    ans++;
+                    button_option2.setEnabled(false);
+                    ans += 10;
                 } else {
 //                    Toast.makeText(getActivity(), "incorrect", Toast.LENGTH_SHORT).show();
                     final MediaPlayer mp = MediaPlayer.create(view.getContext(), wrong);
@@ -125,7 +127,8 @@ public class QuizGameFragment extends Fragment {
 //                    Toast.makeText(getActivity(), "correct", Toast.LENGTH_SHORT).show();
                     final MediaPlayer mp = MediaPlayer.create(view.getContext(), correct);
                     mp.start();
-                    ans++;
+                    button_option3.setEnabled(false);
+                    ans += 10;
                 } else {
 //                    Toast.makeText(getActivity(), "incorrect", Toast.LENGTH_SHORT).show();
                     final MediaPlayer mp = MediaPlayer.create(view.getContext(), wrong);
@@ -149,9 +152,10 @@ public class QuizGameFragment extends Fragment {
 //                    Toast.makeText(getActivity(), "correct", Toast.LENGTH_SHORT).show();
                     final MediaPlayer mp = MediaPlayer.create(view.getContext(), correct);
                     mp.start();
-                    ans++;
+                    button_option4.setEnabled(false);
+                    ans += 10;
                 } else {
-//                    Toast.makeText(getActivity(), "incorrect", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(getActivity(), "incorrect", Toast.LENGTH_SHORT).1show();
                     final MediaPlayer mp = MediaPlayer.create(view.getContext(), wrong);
                     mp.start();
                     Vibrator v = (Vibrator) view.getContext().getSystemService(Context.VIBRATOR_SERVICE);
