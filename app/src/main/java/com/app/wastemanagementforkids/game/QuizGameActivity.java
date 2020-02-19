@@ -56,6 +56,7 @@ public class QuizGameActivity extends AppCompatActivity {
                     .setPositiveButton("confirm", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int whichButton) {
                             startActivity(new Intent(QuizGameActivity.this, GameHomeActivity.class));
+                            QuizGameFragment.ans = 0;
                             finish();
                         }
                     })
